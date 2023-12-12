@@ -37,27 +37,28 @@ const Details = () => {
         fetchNews()
         
       }, [id])
-    return ( 
-    <>{itemDetails 
-        &&
-        <div>
-        <p>
-            {itemDetails.points}
-        </p>
-        <p>{itemDetails.title}</p>
-        </div>
-        
-        }
-        <div>
-            <h1>All comments</h1>
-        { comments?.map((comment,i)=>{
-            return <p key={i}>{comment.text}</p>
-
-        })}
-        </div>
-        
-        
-    </> );
+      return (
+        <>
+          {itemDetails &&
+            <div className="p-4 border border-gray-300 rounded mb-4">
+              <p className="text-xl font-bold text-teal-500">{itemDetails.points}</p>
+              <p className="text-lg">{itemDetails.title}</p>
+            </div>
+          }
+      
+          <div>
+            <h1 className="text-2xl font-bold mb-4 m-2 text-teal-500">All comments</h1>
+            <ul className="list-disc pl-4 m-3">
+            {comments?.map((comment, i) => {
+              return (
+                <li key={i} className="mb-2">{comment.text}</li>
+              );
+            })}
+            </ul>
+          </div>
+        </>
+      );
+      
 }
  
 export default Details;
