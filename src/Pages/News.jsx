@@ -1,5 +1,5 @@
 import SearchBar from "../components/SearchBar";
-import Posts from "../components/posts";
+import Posts from "../components/Posts";
 import { useEffect,useState } from "react";
 import axios from 'axios';
 
@@ -64,8 +64,7 @@ const News = () => {
           </>
         )}
       </main>
-        {/* <SearchBar/>
-        <Posts/> */}
+        
         </>
      );
 }
