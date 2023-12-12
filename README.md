@@ -2,7 +2,6 @@
 
 # Project Name
 
-Welcome to Project Name! This is a brief introduction to the project.
 
 ## Getting Started
 
